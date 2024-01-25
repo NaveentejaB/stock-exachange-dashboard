@@ -1,5 +1,6 @@
 const {Pool} = require('pg')
 
+// details of the database
 const pool = new Pool({
     user: 'postgres',
     host: 'localhost',
@@ -16,6 +17,7 @@ pool.on('error', (err, client) => {
 
 const intializeDB = async() => {
     const client = await pool.connect()
+    // creating the table if it doesn't exist
     let queryTable = `create table if not exists nwfData(
         nft_id SERIAL primary key,
         namee character varying(55) ,

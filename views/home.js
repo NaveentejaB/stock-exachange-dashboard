@@ -7,6 +7,8 @@ toggle_box.addEventListener('change',() => {
     let table_rows = document.querySelectorAll('.table_row')
     let best_trade_txt_div = document.querySelector('.time_val_best_trade')
     let middle_navbar_buttons = document.querySelectorAll('.drd')
+
+    // dark theme
     if(checkbox.checked){
         circle.style.transform = "translateX(-28px)"
         toggle_box.style.background = '#f8f9fa'
@@ -29,6 +31,7 @@ toggle_box.addEventListener('change',() => {
         })
         document.getElementById('progress').style.background = '#fff'
     }else{
+        // light theme
         circle.style.transform = "translateX(0px)"
         toggle_box.style.background = '#2e3241'
         toggle_box.style.boxShadow = 'none'
@@ -66,6 +69,7 @@ const update_in_frontend = async(data) => {
         rows_container.innerHTML = ''
         let each_row = document.getElementById('id_each_row')
         each_row.style.display = 'table-row'
+        //cloning the rows and updating with the values
         data.forEach((each_data)=>{
             var clone_each_row = each_row.cloneNode(true)
             console.log(each_data.nft_id)
@@ -136,6 +140,7 @@ const fetch_data_from_api_to_database = async()=>{
     }
 }
 
+// function that runs the timer in navbar
 const timer_runer = () => {
     const progressElement = document.getElementById('progress')
     const circleElement = document.getElementById('circle')
@@ -151,6 +156,7 @@ const timer_runer = () => {
         )`
         progressElement.innerText = counter
         if (counter === 0) {
+            //updating the data from api to the database
             fetch_data_from_api_to_database()
             counter = maxValue
         } else {

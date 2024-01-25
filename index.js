@@ -9,11 +9,12 @@ const app = express();
 
 const userRoutes = require('./routes/user_routes')
 
+//cors setting
 const corsOptions = {
     origin: '*', // Update with your frontend's URL
     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
     credentials: true, // Enable CORS credentials (cookies, authorization headers, etc.)
-    allowedHeaders: 'Content-Type,Authorization',
+    allowedHeaders: 'Content-Type',
 };
 
 app.use(cors(corsOptions));
@@ -23,6 +24,7 @@ app.use(bodyParser.urlencoded({extended:true}))
 app.use(express.json());
 app.use('/public', express.static('public'));
 app.use('/',userRoutes)
+
 app.use((err, req, res, next) => {
     console.log(err)
     res.status(err.status || 500).json({
