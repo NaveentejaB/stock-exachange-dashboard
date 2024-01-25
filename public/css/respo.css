@@ -1,0 +1,74 @@
+@media screen and (max-width:820px) {
+    .navbar{
+        width: 100%;
+        height: 30%;
+        flex-direction: column;
+        justify-content: center;
+        margin-top: 15px;
+    }
+    .logo{
+        width: 100%;
+        height: 30%;
+    }
+    .mid_nav{
+        width: 100%;
+        height: 30%;
+        justify-content: center;
+        gap: 15px;
+    }
+    .end_nav{
+        width: 100%;
+        height: 30%;
+        justify-content: center;
+        gap: 15px;
+    }
+    .cnt_to_tel{
+        width: 140px;
+        height: 40px;
+    }
+    /* above table content */
+    .above_table_content{
+        width: 100%;
+        height: auto;
+    }
+    .time_val{
+        width: 80px;
+        height: 60px;
+    }
+    .time_val > .value{
+        font-size: 20px;
+    }
+    .time_val > .time{
+        font-size: 10px;
+    }
+    .time_val_best_trade{
+        width: 150px;
+        height: 100px;
+        gap: 5px;
+    }
+    .time_val_best_trade > .big_txt_best_trade{
+        font-size: 24px;
+    }
+    .best_ptt{
+        font-size: 10px;
+    }
+    .avg_net_price_txt{
+        font-size: 7px;
+        height: 15px;
+    }
+    /* table */
+    .table-transparent thead th{
+        font-size: 15px;
+    }
+    .table_row_div{
+        padding: 10px 0;
+    }
+    .table-transparent tbody tr{
+        height: 45px;
+        padding: 0;
+    }
+    .table-transparent tbody td{
+        font-size: 20px;
+        color: #fff;
+    }
+}

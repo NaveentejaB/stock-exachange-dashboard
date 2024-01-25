@@ -1,0 +1,80 @@
+.table_row_div{
+    width: 100%;
+    height: auto;
+    padding: 2% 3%;
+}
+table{
+    border-collapse: separate;
+    border-spacing: 0 12px;
+}
+.table-bordered > :not(caption) > * > * {
+    border-width: 0 !important; /* Remove default borders */
+    border-radius: 0 !important;
+}
+.table-transparent thead th,
+.table-transparent tbody td{
+      background-color: transparent !important;
+      text-align: center;
+      
+}
+.table-transparent thead th{
+    color: #6c757d;
+    font-size: 27px;
+}
+.table-transparent tbody tr{
+    background: #2e3241;
+    height: 55px;
+}
+.table-transparent tbody td{
+    font-size: 25px;
+    color: #fff;
+}
+.first_col{
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+.last_col{
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+/* minimum widths for the columns */
+.last_trade_pri{
+    min-width: 130px;
+}
+.buy_and_sell{
+    min-width: 200px
+}
+.diff{
+   min-width: 90px; 
+}
+.savings{
+    min-width: 160px;
+}
+#id_each_row{
+    display: none;
+}
+footer{
+    bottom: 0;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+}
+.line{
+    width: 100%;
+    height: 2px;
+    background: #2e3241;
+}
+.footer_stuff{
+    height: auto;
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.footer_stuff > div{
+    color: #2e3241;
+    font-size: 14px;
+}

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>website</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="myProjects/webProject/icofont/css/icofont.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/public/css/navbar.css">
+    <link rel="stylesheet" href="/public/css/middle.css">
+    <link rel="stylesheet" href="/public/css/table.css">
+    <link rel="stylesheet" href="/public/css/respo.css">
+</head>
+<body>
+    
+        <div class="container-fluid main">
+          <!-- navbar -->
+          <div class="navbar">
+              <div class="logo"><img src="/public/logo.png" alt=""></div>
+              <div class="mid_nav">
+                  <div class="dropdown">
+                      <button class="btn btn-secondary dropdown-toggle drd" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        INR
+                      </button>
+                      <ul class="dropdown-menu drop_menu">
+                        <li><a class="dropdown-item" href="#">INR</a></li>
+                      </ul>
+                  </div>
+                  <div class="dropdown">
+                      <button class="btn btn-secondary dropdown-toggle drd" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        BTC
+                      </button>
+                      <ul class="dropdown-menu drop_menu">
+                        <li><a class="dropdown-item" href="#">BTC</a></li>
+                        <li><a class="dropdown-item" href="#">ETH</a></li>
+                        <li><a class="dropdown-item" href="#">USDT</a></li>
+                        <li><a class="dropdown-item" href="#">XRP</a></li>
+                        <li><a class="dropdown-item" href="#">TRX</a></li>
+                        <li><a class="dropdown-item" href="#">DASH</a></li>
+                        <li><a class="dropdown-item" href="#">ZEC</a></li>
+                        <li><a class="dropdown-item" href="#">XEM</a></li>
+                        <li><a class="dropdown-item" href="#">IOST</a></li>
+                        <li><a class="dropdown-item" href="#">WIN</a></li>
+                        <li><a class="dropdown-item" href="#">BTT</a></li>
+                        <li><a class="dropdown-item" href="#">WRX</a></li>
+                      </ul>
+                  </div>
+                  <div class="dropdown">
+                      <button class="btn btn-secondary drd" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        BUY BTC
+                      </button>
+                  </div>
+              </div>
+              <div class="end_nav">
+                  <div id="circle" class="circle">
+                    <div id="progress" class="progress"><p>60</p></div>
+                  </div>
+                  <div class="cnt_to_tel">
+                      <i class="icofont-paper-plane"></i>
+                      <span>Connect to Telegram</span>
+                  </div>
+                  <div>
+                    <label class="toggle_box">
+                      <input type="checkbox" id="checkbox">
+                      <div class="circle_tg"></div>
+                    </label>
+                  </div>
+              </div>
+          </div>
+          <!-- middle part showing costs which is above the table -->
+          <div class="above_table_content">
+              <div class="values_part">
+                  <div class="time_val">
+                      <div class="value">0.33%</div>
+                      <div class="time">5 mins</div>
+                  </div>
+                  <div class="time_val">
+                      <div class="value">1.47%</div>
+                      <div class="time">1 Hour</div>
+                  </div>
+                  <div class="time_val_best_trade">
+                    <div class="best_ptt"><p>Best Price to Trade</p></div>
+                      <div class="big_txt_best_trade">₹ 35,84,821</div>
+                      <div class="avg_net_price_txt">Average BTC/INR net price including commission</div>
+                  </div>
+                  <div class="time_val">
+                      <div class="value">3.91%</div>
+                      <div class="time">1 Day</div>
+                  </div>
+                  <div class="time_val">
+                      <div class="value">8.26%</div>
+                      <div class="time">7 Days</div>
+                  </div>
+              </div>
+          </div>
+          <div class="table-responsive-lg table-responsive-sm table-responsive-xs table-responsive-md table_row_div">
+              <table class="table table-borderless  table-transparent">
+                  <thead>
+                    <tr>
+                      <th scope="col" class="idx">#</th>
+                      <th scope="col" class="name">Platform</th>
+                      <th scope="col" class="last_trade_pri">Last Traded Price</th>
+                      <th scope="col" class="buy_and_sell">Buy / Sell Price</th>
+                      <th class="diff">Difference</th>
+                      <th class="last_col savings">Savings</th>
+                    </tr>
+                  </thead>
+                  <tbody id="rows_parent">
+                  </tbody>
+                  <tr class="table_row" id="id_each_row">
+                    <td scope="row" class="first_col idx" id="id_idx">1</td>
+                    <td class="name" id="id_name">Wazirx</td>
+                    <td class="last_trade_pri" id="id_last_trade_pri">₹2,00,060</td>
+                    <td class="buy_and_sell" id="id_buy_and_sell">₹2,00,060 / ₹2,01,999</td>
+                    <td class="diff" id="id_diff">-2.75 %</td>
+                    <td class="last_col savings" id="id_savings">▼ ₹2,00,060</td>
+                  </tr>
+                </table>
+          </div>
+      </div>
+      <div class="add_to_home_btn">
+        <button class="add-button btn btn-outline-info" style="position: fixed; margin-bottom:90px;">Add hodlinfo to home screen</button>
+      </div>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+    <script src="./home.js"></script>
+  </body>
+</html>

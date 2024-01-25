@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Border Fill Animation</title>
+  <style>
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #f0f0f0;
+    }
+
+    .circle {
+      position: relative;
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      overflow: hidden;
+    }
+
+    .progress {
+      position: absolute;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      background: #f0f0f0;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 24px;
+      font-weight: bold;
+      color: #333;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  </style>
+</head>
+<body>
+  <div id="circle" class="circle">
+    <div id="progress" class="progress"><p>60</p></div>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const progressElement = document.getElementById('progress');
+      const circleElement = document.getElementById('circle');
+      const maxValue = 60;
+      let counter = maxValue;
+
+      function updateProgress() {
+        const percentage = (counter / maxValue) * 100;
+        circleElement.style.background = `conic-gradient(
+          #3498db 0%,
+          #3498db ${percentage}%,
+          transparent ${percentage}%,
+          transparent 100%
+        )`;
+        progressElement.innerText = counter;
+
+        if (counter === 0) {
+          // Run your fetch details function here
+          fetchDetails();
+          counter = maxValue; // Reset counter
+        } else {
+          counter--;
+        }
+      }
+
+      function fetchDetails() {
+        // Implement your fetch details logic here
+        console.log('Fetching details...');
+      }
+
+      setInterval(updateProgress, 1000); // Update progress every second (adjust as needed)
+    });
+  </script>
+</body>
+</html>
+
+
+
+
+

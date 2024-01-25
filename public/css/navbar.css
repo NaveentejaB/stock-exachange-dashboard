@@ -1,0 +1,144 @@
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Oswald', sans-serif;
+    
+}
+body{
+    background:  #191d28;
+    
+}
+
+.main{
+    height: 100vh;
+}
+/* navbar */
+.navbar{
+    width: 100%;
+    height: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 0 3%;
+}
+.logo{
+    height: 80px;
+    width: 25%;
+}
+.logo > img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.mid_nav{
+    width: 20%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+.drd{
+    background: #2e3241;
+    border-radius: 8px;
+    border: 0;
+}
+.end_nav{
+    width: 30%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+.timer{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 5px solid #3dc6c1;
+    color: #3dc6c1;
+    text-align: center;
+}
+.cnt_to_tel{
+    width: 160px;
+    height: 40px;
+    background: #3dc6c1;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.cnt_to_tel > span{
+    color: antiquewhite;
+    background: #3dc6c1;
+    font-size: 10px;
+}
+.drop_menu li{
+    background: white;
+}
+.add_to_home_btn{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* timer with border filling */
+.circle {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+
+  .progress {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: #191d28;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 14px;
+    font-weight: bold;
+    color: #3dc6c1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+
+/* toggle button */
+.toggle_box{
+    width: 70px;
+    height: 40px;
+    display: block;
+    background-color: #2e3241;
+    border-radius: 40px;
+    cursor: pointer;
+    position: relative;
+    transition: 0.5s;
+}
+input[type="checkbox"]{
+    display: none;
+}
+.circle_tg{
+    position: absolute;
+    width: 28px;
+    height: 28px;
+    right: 0px;
+    background-color: #3dc6c1;
+    border-radius: 1000px;
+    /* margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    margin-right: 10px; */
+    margin: 6px;
+    transition: 0.5s;
+
+}
+
